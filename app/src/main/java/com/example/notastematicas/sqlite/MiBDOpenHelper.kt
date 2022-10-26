@@ -2,6 +2,7 @@ package com.example.notastematicas.sqlite
 
 import android.content.ContentValues
 import android.content.Context
+import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteException
 import android.database.sqlite.SQLiteOpenHelper
@@ -54,5 +55,12 @@ class MiBDOpenHelper(contex: Context, factory: SQLiteDatabase.CursorFactory?) :
         db.insert(TABLA_NOTAS,null,data)
         db.close()
     }
+
+    fun obtenerNotas():Cursor {
+        val db= this.readableDatabase
+        var cursor = db.rawQuery("SELECT * FROM ${MiBDOpenHelper.TABLA_NOTAS}", null)
+        return cursor
+    }
+
 }
 
