@@ -10,12 +10,15 @@ import com.example.notastematicas.room.entidades.nota.NotaDao
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 
-@Database(entities = arrayOf(Nota::class), version = 1, exportSchema = false)
+@Database(
+    entities = [Nota::class],
+    version =2
+)
 abstract class RoomBaseDeDatos : RoomDatabase() {
 
     abstract fun notaDao(): NotaDao
 
-    companion object {
+    /*companion object {
         // Singleton prevents multiple instances of database opening at the
         // same time.
         @Volatile
@@ -61,10 +64,10 @@ abstract class RoomBaseDeDatos : RoomDatabase() {
 
                 // Añadimos una nota
                 var nota = Nota(texto = "1º Nota")
-                notaDao.insertatNota(nota)
+                notaDao.insertarNota(nota)
 
             }
         }
 
-    }
+    }*/
 }

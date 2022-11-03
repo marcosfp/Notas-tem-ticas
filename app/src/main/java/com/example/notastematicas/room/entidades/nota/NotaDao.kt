@@ -10,10 +10,10 @@ import kotlinx.coroutines.flow.Flow
 interface  NotaDao {
 
     @Query("SELECT * FROM tabla_notas ORDER BY texto_nota ASC")
-    fun obTenerTodasLasNotas(): Flow<List<Nota>>
+    suspend fun obtenerTodasLasNotas(): List<Nota>
 
     @Insert(onConflict = OnConflictStrategy.IGNORE)
-    suspend fun insertatNota(nota: Nota)
+    suspend fun insertarNota(nota: Nota)
 
     @Query("DELETE FROM tabla_notas")
     suspend fun borrarTodasLasNotas()

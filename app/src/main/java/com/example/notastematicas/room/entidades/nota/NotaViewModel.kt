@@ -5,7 +5,7 @@ import kotlinx.coroutines.launch
 
 class NotaViewModel(private val repositorioNotas: NotasRepositorio) : ViewModel() {
 
-    val todasLasNotas: LiveData<List<Nota>> = repositorioNotas.todasLasNotas.asLiveData()
+    //val todasLasNotas: LiveData<List<Nota>> = repositorioNotas.todasLasNotas.asLiveData()
 
     fun insertNota(nota: Nota) = viewModelScope.launch {
         repositorioNotas.insertarNota(nota)

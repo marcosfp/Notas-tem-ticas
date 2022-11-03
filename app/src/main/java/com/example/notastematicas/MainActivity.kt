@@ -6,6 +6,7 @@ import android.os.Bundle
 import com.example.notastematicas.databinding.ActivityMainBinding
 import com.example.notastematicas.databinding.ActivitySqliteBinding
 import com.example.notastematicas.room.RoomActivity
+import com.example.notastematicas.room.RoomBDApplication
 import com.example.notastematicas.sqlite.SQLiteActivity
 
 class MainActivity : AppCompatActivity() {

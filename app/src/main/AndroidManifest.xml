@@ -2,9 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.notastematicas">
-
+<!--    android:name=".room.RoomBDApplication"-->
     <application
-        android:name=".room.RoomBDApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -21,11 +20,6 @@
             android:name=".room.RoomActivity"
             android:exported="false"
             android:label="@string/title_activity_room"
-            android:theme="@style/Theme.NotasTemáticas.NoActionBar" />
-        <activity
-            android:name=".room.ListarRoomActivity"
-            android:exported="false"
-            android:label="@string/title_activity_listar_room"
             android:theme="@style/Theme.NotasTemáticas.NoActionBar" />
         <activity
             android:name=".MainActivity"

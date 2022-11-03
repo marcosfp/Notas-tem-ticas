@@ -6,5 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".room.RoomActivity">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/room_RecyclerViewNotas"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/room_EditTextoNota"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="277dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Nota"
+        app:layout_constraintBottom_toTopOf="@+id/room_ButtonCrearNota"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.504"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/room_RecyclerViewNotas" />
+
+    <Button
+        android:id="@+id/room_ButtonCrearNota"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="59dp"
+        android:text="Crear Nota"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/room_EditTextoNota" />
+
+    <Spinner
+        android:id="@+id/room_SpinnerTematica"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="220dp"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/room_RecyclerViewNotas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Seleciona prioridad:"
+        app:layout_constraintTop_toBottomOf="@+id/room_RecyclerViewNotas" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

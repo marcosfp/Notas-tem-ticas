@@ -5,12 +5,12 @@ import kotlinx.coroutines.flow.Flow
 
 class NotasRepositorio(private val notaDao: NotaDao) {
 
-    val todasLasNotas: Flow<List<Nota>> = notaDao.obTenerTodasLasNotas()
+    //val todasLasNotas: List<Nota> = notaDao.obtenerTodasLasNotas()
 
     @Suppress("RedundantSuspendModifier")
     @WorkerThread
     suspend fun insertarNota(nota: Nota){
-        notaDao.insertatNota(nota)
+        notaDao.insertarNota(nota)
     }
 
 
