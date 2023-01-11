@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.notastematicas">
-<!--    android:name=".room.RoomBDApplication"-->
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -13,6 +16,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NotasTemáticas"
         tools:targetApi="31">
+        <activity
+            android:name=".rest.quotes.JokeActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".rest.RestActivity"
+            android:exported="false"
+            android:label="@string/title_activity_rest"
+            android:theme="@style/Theme.NotasTemáticas.NoActionBar" />
         <activity
             android:name=".sqlite.SQLiteActivity"
             android:exported="false" />

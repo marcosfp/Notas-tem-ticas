@@ -1,7 +1,6 @@
 package com.example.notastematicas.sqlite
 
 import android.R
-import android.database.sqlite.SQLiteDatabase
 import android.os.Bundle
 import android.view.View
 import android.widget.AdapterView
@@ -17,7 +16,6 @@ class SQLiteActivity : AppCompatActivity() {
     private lateinit var binding: ActivitySqliteBinding
 
     private lateinit var notasDBHelper: MiBDOpenHelper
-    private lateinit var db: SQLiteDatabase
     private lateinit var miSQLiteRecyclerViewAdapter: SQLiteRecyclerViewAdapter
     private lateinit var tematicaSelecionada: TematicaSpinner
 
